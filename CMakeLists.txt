@@ -20,6 +20,6 @@ add_subdirectory(src)
 
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME AND BUILD_TESTING)
 	include(extras/CompileOptions.cmake)
-	add_subdirectory(extras/tests)
+	#add_subdirectory(extras/tests)
 	add_subdirectory(extras/fuzzing)
 endif()
