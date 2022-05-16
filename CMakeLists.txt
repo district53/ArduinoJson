@@ -12,9 +12,11 @@ endif()
 
 project(ArduinoJson VERSION 6.19.4)
 
-if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
-    include(CTest)
-endif()
+set(CMAKE_SHARED_LIBRARY_LINK_CXX_FLAGS "") # disable -rdynamic - https://stackoverflow.com/q/35155835
+
+#if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+#    include(CTest)
+#endif()
 
 add_subdirectory(src)
 
